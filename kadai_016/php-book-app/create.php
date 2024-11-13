@@ -1,5 +1,5 @@
 <?php
- $dsn = 'mysql:dbname=oaw4z00z8kvgfvp8;host=q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;charset=utf8mb4';
+ $dsn = 'mysql://qa17pxb0fc5tfcsi:evq6sdewaz08s4p6@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/oaw4z00z8kvgfvp8';
  $user = 'qa17pxb0fc5tfcsi';
 // MAMPを利用しているMacユーザーの方は、''ではなく'root'を代入してください
  $password = 'evq6sdewaz08s4p6';
@@ -62,7 +62,7 @@
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>商品登録</title>
+     <title>書籍登録</title>
      <link rel="stylesheet" href="css/style.css">
  
      <!-- Google Fontsの読み込み -->
@@ -74,21 +74,21 @@
  <body>
      <header>
          <nav>
-             <a href="index.php">商品管理アプリ</a>
+             <a href="index.php">書籍管理アプリ</a>
          </nav>
      </header>
      <main>
          <article class="registration">
-             <h1>商品登録</h1>
+             <h1>書籍登録</h1>
              <div class="back">
                  <a href="read.php" class="btn">&lt; 戻る</a>
              </div>
              <form action="create.php" method="post" class="registration-form">
                  <div>
-                     <label for="product_code">商品コード</label>
+                     <label for="product_code">書籍コード</label>
                      <input type="number" id="product_code" name="product_code" min="0" max="100000000" required>
  
-                     <label for="product_name">商品名</label>
+                     <label for="product_name">書籍名</label>
                      <input type="text" id="product_name" name="product_name" maxlength="50" required>
  
                      <label for="price">単価</label>
@@ -113,7 +113,7 @@
          </article>
      </main>
      <footer>
-         <p class="copyright">&copy; 商品管理アプリ All rights reserved.</p>
+         <p class="copyright">&copy; 書籍管理アプリ All rights reserved.</p>
      </footer>
  </body>
  
