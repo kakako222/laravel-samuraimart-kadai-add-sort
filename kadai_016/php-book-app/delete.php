@@ -1,14 +1,14 @@
 <?php
- $dsn = 'mysql://qa17pxb0fc5tfcsi:evq6sdewaz08s4p6@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/oaw4z00z8kvgfvp8';
- $user = 'qa17pxb0fc5tfcsi';
+ $dsn = 'mysql:dbname=php_book_app;host=localhost;charset=utf8mb4';
+ $user = 'root';
 // MAMPを利用しているMacユーザーの方は、''ではなく'root'を代入してください
- $password = 'evq6sdewaz08s4p6';
+ $password = 'root';
  
  try {
      $pdo = new PDO($dsn, $user, $password);
  
      // idカラムの値をプレースホルダ（:id）に置き換えたSQL文をあらかじめ用意する
-     $sql_delete = 'DELETE FROM products WHERE id = :id';
+     $sql_delete = 'DELETE FROM books WHERE id = :id';
      $stmt_delete = $pdo->prepare($sql_delete);
  
      // bindValue()メソッドを使って実際の値をプレースホルダにバインドする（割り当てる）

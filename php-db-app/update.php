@@ -1,5 +1,5 @@
 <?php
-  $dsn = 'mysql:dbname=c24jy4t5xvm8bf5a;host=iu51mf0q32fkhfpl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;charset=utf8mb4'
+  $dsn = 'mysql:dbname=c24jy4t5xvm8bf5a;host=iu51mf0q32fkhfpl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;charset=utf8mb4';
   $user = 'vmyn3zg889qrxsxp';
  // MAMPを利用しているMacユーザーの方は、''ではなく'root'を代入してください
   $password = 'wnbhlxeswrgnxdth';
