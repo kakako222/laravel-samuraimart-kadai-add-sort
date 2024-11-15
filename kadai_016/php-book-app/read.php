@@ -54,12 +54,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>書籍一覧</title>
-    <?php
-             // （商品の登録・編集・削除後）messageパラメータの値を受け取っていれば、それを表示する
-             if (isset($_GET['message'])) {
-                 echo "<p class='success'>{$_GET['message']}</p>";
-             }
-             ?>
+    
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Fontsの読み込み -->
@@ -77,6 +72,12 @@ try {
     <main>
         <article class="books">
             <h1>書籍一覧</h1>
+            <?php
+             // （商品の登録・編集・削除後）messageパラメータの値を受け取っていれば、それを表示する
+             if (isset($_GET['message'])) {
+                 echo "<p class='success'>{$_GET['message']}</p>";
+             }
+             ?>
             <div class="books-ui">
                 <div>
                     <a href="read.php?order=desc&keyword=<?= $keyword ?>">
