@@ -16,9 +16,9 @@ class PostFactory extends Factory
         $faker = FakerFactory::create('ja_JP');
         
         return [
-            'title' => $faker->realText(20),  // 日本語で20文字程度のタイトルを生成
-            'content' => $faker->realText(200), // 日本語で200文字程度の本文を生成
-            'user_id' => 1, // 必要に応じて変更（例として1を設定）
+            'user_id' => 1, // usersテーブルにidカラムの値が1のユーザーが存在することが前提
+             'title' => fake()->realText(20, 5),
+             'content' => fake()->realText(200, 5)
         ];
     }
 }

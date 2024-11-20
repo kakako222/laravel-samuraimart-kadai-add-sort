@@ -1,8 +1,10 @@
 <?php
+
 namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Post;
-use App\Models\User;
+ use App\Models\Post;
 
 class PostSeeder extends Seeder
 {
@@ -11,11 +13,8 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        // 存在するユーザーのIDをランダムに選択してポストを作成
-        $userIds = User::all()->pluck('id')->toArray();
 
-        Post::factory()->count(5)->create([
-            'user_id' => $userIds[array_rand($userIds)],
-        ]);
+         // PostFactoryクラスで定義した内容にもとづいてダミーデータを5つ生成し、postsテーブルに追加する
+         Post::factory()->count(5)->create();
     }
 }
