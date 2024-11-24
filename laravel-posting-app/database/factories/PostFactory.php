@@ -14,11 +14,11 @@ class PostFactory extends Factory
     {
         // Fakerの日本語ロケールを指定
         $faker = FakerFactory::create('ja_JP');
-        
+
         return [
             'user_id' => 6, // usersテーブルにidカラムの値が1のユーザーが存在することが前提
-             'title' => fake()->realText(20, 5),
-             'content' => fake()->realText(200, 5)
+            'title' => fake()->realText(20, 5),
+            'content' => fake()->realText(200, 5)
         ];
     }
 }
